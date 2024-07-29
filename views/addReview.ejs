@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Book Review App</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Book Review App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/addBook">Add new book</a>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <br>
+    <div class="text-center"><h2>Add Review</h2></div>
+    <br>
+    <!-- Form to add a new review -->
+    <form action="/book/<%= bookId %>/addReview" method="POST">
+      <div class="mb-3">
+        <!-- Input for Reviewer Name -->
+        <label for="reviewerName">Reviewer Name:</label>
+        <input type="text" class="form-control" id="reviewerName" name="reviewerName" required>
+      </div>
+
+      <div class="mb-3">
+        <!-- Input for review text -->
+        <label for="reviewText">Enter your review:</label>
+        <input type="text" class="form-control" id="reviewText" name="reviewText" required>
+      </div>
+
+      <div class="mb-3">
+        <!-- Input for last edited date -->
+        <label for="lastEdited">Date Edited:</label>
+        <input type="date" class="form-control" id="lastEdited" name="lastEdited" required>
+      </div>
+
+      <!-- Button to submit the form -->
+      <button type="submit" class="btn btn-primary">Add Review</button>
+    </form>
+  </div>
+</body>
+</html>
+
+<!--Surendirakumar Dhiveyasree 23025757-->
